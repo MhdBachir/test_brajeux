@@ -12,6 +12,12 @@ module.exports = {
       },
       gap:{
         '13': '3.25rem',
+      },
+      height: {
+        content: 'fit-content'
+      },
+      width: {
+        content: 'fit-content'
       }
     },
   },

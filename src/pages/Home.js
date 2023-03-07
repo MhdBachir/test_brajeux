@@ -1,26 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import res from './workOn';
-import axios from 'axios';
 import ImageSlider from './ImageSlider';
+import {Link} from "react-router-dom";
 
-const images = res;
+const Home = () => {
+    const [slideDescription, setSlideDescription] = React.useState("");
 
-// Transforme la liste d'images en une liste d'objets avec une URL et une légende pour chaque image
-const slideImages = images.map((image, index) => ({ url: image, caption: `Slide ${index}` }));
-
-const Home = props => {
-  return (
-    <div className='h-full w-screen bg-black object-cover md:h-100% flex h-100%  '>
-      <ImageSlider callback={props.callback} />
+    return (
+    <div className='h-full w-screen bg-white md:bg-black flex justify-center items-center text-black md:text-white '>
+        <nav className="flex w-full justify-between items-center p-7 absolute font-semibold text-lg top-0 left-0">
+            <Link to="/">BUREAUHELLER™</Link>
+            <div className="flex items-center justify-end gap-8">
+                <Link to="/about">ABOUT</Link>
+                <Link to="https://www.google.com">GOOGLE</Link>
+            </div>
+        </nav>
+      <ImageSlider callback={setSlideDescription} />
+        <footer className="flex w-full justify-center md:justify-between items-center p-7 absolute bottom-0">
+            <Link to="/" className="hidden md:block">2023</Link>
+            <Link to="https://www.google.com" >{slideDescription}</Link>
+        </footer>
     </div>
   );
 };
-
-Home.propTypes = {
-    callback: PropTypes.func,
-};
-
 export default Home;
 
 

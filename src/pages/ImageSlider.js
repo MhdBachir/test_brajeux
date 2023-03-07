@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import res from './workOn';
-import ImageSlider from './slider';
 
 const images = res;
 const slideImages = images.map((image, index) => ({ url: image, caption: `Slide ${index}` }));
 const SlideShow = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    props.callback(slideImages[0].caption);
+    return () => { props.callback(null)};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   const handleSlideClick = (event) => {
     // On calcule la position du clic par rapport à la largeur de la fenêtre
     const clickPosition = event.clientX / window.innerWidth;
@@ -25,8 +29,12 @@ const SlideShow = (props) => {
   };
 
   return (
-    <div className="h-full w-screen bg-black object-cover md:h-100% flex h-100%" onClick={handleSlideClick}>
-      <img src={slideImages[currentIndex].url} className="w-full h-full object-cover lg:w-full h-full object-cover sm:h-auto w-90 object-cover background-color:white flex h-80" />
+    <div className="px-2 md:px-0 h-80 md:h-full w-full md:w-screen md:bg-black md:object-cover flex" onClick={handleSlideClick}>
+      <img
+          src={slideImages[currentIndex].url}
+          alt={'project'}
+          className="w-full h-full object-cover lg:w-full h-full object-cover sm:h-auto w-90 object-cover background-color:white flex h-80"
+      />
     </div>
   );
 };
