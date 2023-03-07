@@ -15,9 +15,9 @@ const Home = () => {
             </div>
         </nav>
       <ImageSlider callback={setSlideDescription} />
-        <footer className="flex w-full justify-center md:justify-between items-center p-7 absolute bottom-0">
+        <footer className="flex w-full justify-center md:justify-between items-center p-7 absolute bottom-0 font-semibold ">
             <Link to="/" className="hidden md:block">2023</Link>
-            <Link to="https://www.google.com" >{slideDescription}</Link>
+            <Link to="https://www.google.com" >{slideDescription?.toUpperCase()}</Link>
         </footer>
     </div>
   );
