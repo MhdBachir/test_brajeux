@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         black: {
           'DEFAULT': '#0D0D0D',
+        },
+        orange: {
+          'DEFAULT': '#FF4007',
         }
       },
       gap:{

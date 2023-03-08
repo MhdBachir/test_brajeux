@@ -4,14 +4,14 @@ import {Link} from "react-router-dom";
 
 const About = () => {
     return (
-        <div className='w-full h-full bg-black p-7 pt-40 py-20 flex md:items-end gap-4 md:gap-8 lg:gap-40 flex-col md:flex-row overflow-auto'>
+        <div className=' flex-col w-full h-full bg-black p-7 pt-40 py-20 flex md: flex- items-end gap-4 md:gap-8 lg:gap-40 flex-col md:flex-row overflow-auto'>
             <nav className="flex w-full justify-between items-center p-7 absolute top-0 left-0 font-semibold text-lg">
                 <Link to="/">BUREAUHELLER™</Link>
                 <Link to="/">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                          x="0px" y="0px"
                          viewBox="0 0 155.71 162.19"
-                         className="fill-current w-16 md:w-32 h-16 md:h-32 absolute flex-none hover:text-orange-500 right-8 top-8">
+                         className="fill-current w-16 md:w-32 h-16 md:h-32 absolute flex-none hover:text-orange right-8 top-8">
                         <polygon points="155.71,0.69 154.99,0 77.86,80.37 0.72,0 0,0.69 77.16,81.1 0,161.5 0.72,162.19 77.86,81.82
                         154.99,162.19 155.71,161.5 78.55,81.1 "
                         />
@@ -37,8 +37,8 @@ const About = () => {
                     <span> DE LA CULTURE ET DE L’INDUSTRIE DU LUXE.</span>
                 </div>
             </div>
-            <div className="flex flex-col justify-between gap-8">
-                <div className="flex-shrink flex gap-4 text-left">
+            <div className="flex flex-col justify-between gap-spe">
+                <div className="flex-shrink flex gap-7 text-left pb-40">
                     <div className="flex flex-col items-start gap-4">
                         <div className="flex flex-col gap-2 md:w-60">
                             <p className='text-white font-semibold'>CONTACT</p>
@@ -46,7 +46,7 @@ const About = () => {
                         </div>
                         <div className="flex flex-col gap-2 md:w-60">
                             <p className='text-white font-semibold'>INSTAGRAM</p>
-                            <p className='text-white text-sm'><a href="https://instagram.com/bureauheller?igshid=YmMyMTA2M2Y=" id="bureauInsta">BureauHeller</a></p>
+                            <p className='text-white hover:text-orange text-sm'><a href="https://instagram.com/bureauheller?igshid=YmMyMTA2M2Y=" id="bureauInsta">BureauHeller</a></p>
                         </div>
                     </div>
                     <div className="flex flex-col items-start gap-4">
@@ -59,7 +59,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <p className='text-white'>To see more confidential projects apply <a href={"/"} className="text-gray-500">here</a></p>
+                <p className='text-white'>To see more confidential projects apply <a href="mailto:irvinheller.pro@gmail.com?subject=Demande de contact" className="text-gray-500  hover:text-orange">here</a></p>
             </div>
 
         </div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.gap-spe{
+  gap: 7rem;
+}
+
 body {
   margin: 0;
   font-family:'Helvetica Neue',system-ui, sans-serif;
@@ -11,4 +15,7 @@ body {
 
 html{
   position: fixed;
+}
+*{
+  font-family:  Helvetica Neue, sans-serif;
 }
