@@ -10,7 +10,9 @@
             const bNumber = parseInt(b.match(/\d+/)[0], 10);
             return aNumber - bNumber;
         });
+        console.log("images listed",imageList);
         return imageList;
+       
     };
 
 
@@ -34,7 +36,11 @@ const res2 = ImageList();
      
     console.log("images",res);
     console.log("res",res);
+
+
+
     export default res;
+
 
     
 

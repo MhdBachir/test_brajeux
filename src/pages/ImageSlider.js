@@ -2,8 +2,14 @@ import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import res from './workOn';
 
+
+console.log("res new info",res);
+
 const images = res;
 const slideImages = images.map((image, index) => ({ url: image, caption: `Slide ${index}` }));
+//refresh res to get the new list of images
+
+
 const SlideShow = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,13 +35,14 @@ const SlideShow = (props) => {
   };
 
   return (
-    <div className="px-2 md:px-0 h-80 md:h-full w-full md:w-screen md:bg-black md:object-cover flex" onClick={handleSlideClick}>
-      <img
+    <div className=" px-2  md:px-0 h-80 md:h-full w-full md:w-screen md:bg-black md: flex" onClick={handleSlideClick}>
+      <img id="img_mobile"
           src={slideImages[currentIndex].url}
           alt={'project'}
-          className="w-full h-full object-cover lg:w-full h-full object-cover sm:h-auto w-90 object-cover background-color:white flex h-80"
+          className=" object-contain sm:h-auto w-90   background-color:white flex h-80  object-contain md:object-contain xl:w-full h-full object-cover "
       />
     </div>
+    
   );
 };
 
