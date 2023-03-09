@@ -1,10 +1,9 @@
 // create a function that create a list of filenames of IMAGES-site order by the name of the file wich is a number en gardant l'url de l'image
- import React from 'react';
-    import PropTypes from 'prop-types';
+
 
 
     const ImageList = () => {
-        const images = require.context('../pages/IMAGES-site', true);
+        const images = require.context('./IMAGES-site', true);
         const imageList = images.keys().sort((a, b) => {
             const aNumber = parseInt(a.match(/\d+/)[0], 10);
             const bNumber = parseInt(b.match(/\d+/)[0], 10);
