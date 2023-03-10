@@ -39,7 +39,7 @@ const SlideShow = (props) => {
       <img id="img_mobile"
           src={slideImages[currentIndex].url}
           alt={'project'}
-          className=" object-contain sm:h-auto w-90   background-color:white flex h-80  object-contain md:object-cover lg:object-cover xl:w-full h-full object-cover "
+          className=" object-contain sm:h-auto w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover "
       />
     </div>
     
