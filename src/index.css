@@ -34,7 +34,13 @@ html{
     object-fit: contain;
   }
 }
-  
+ 
+@media screen and (min-width: 768px) {
+  #img_mobile {
+    object-fit: cover;
+  }
+}
+
 @media screen and (max-width: 1220px) {
   #img_mobile {
     object-fit: cover;
