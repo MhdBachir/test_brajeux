@@ -44,7 +44,7 @@ const Home = () => {
         
        
         
-        <nav className="flex w-full justify-between items-center p-7 absolute font-semibold text-lg top-0 left-0">
+        <nav className="sm: p-4 flex w-full justify-between items-center p-7 absolute font-semibold text-lg top-0 left-0">
             <Link to="/">BUREAUHELLER™</Link>
             <div className="flex items-center justify-end gap-8 ">
                 <Link  className=" hover:text-orange" to="/about">ABOUT</Link>

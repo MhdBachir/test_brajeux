@@ -18,8 +18,8 @@ const About = () => {
                     </svg>
                 </Link>
             </nav>
-            <div className="flex flex-col gap-2 md:gap-14 md:text-lg lg:text-xl xl:text-2xl font-semibold h-content md:flex-none">
-                <div className='text-white w-full block md:flex flex-col'>
+            <div id="about_text" className="flex flex-col gap-2 md:gap-14 md:text-lg lg:text-xl xl:text-2xl font-semibold h-content md:flex-none">
+                <div  className='text-white w-full block md:flex flex-col '>
                     <span>BUREAUHELLER IS AN PARISIAN INDEPENDENT DESIGN STUDIO </span>
                     <span>FOUNDED BY IRVIN HELLER, THE STUDIO’S PRACTICE OSCILLATES </span>
                     <span>BETWEEN ART DIRECTION, GRAPHIC DESIGN, TYPOGRAPHY, </span>

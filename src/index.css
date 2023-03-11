@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family:'Helvetica Neue',system-ui, sans-serif;
+  font-family:'Helvetica 65 Medium',system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,7 +17,7 @@ html{
   position: fixed;
 }
 *{
-  font-family:  Helvetica Neue, sans-serif;
+  font-family: Helvetica 65 Medium;
 }
 
 #image-container {
@@ -28,6 +28,10 @@ html{
   height: 100%;
   z-index: 9999;
 }
+#about_text{
+  font-family: Helvetica 65 Medium;
+}
+
 
 @media screen and (max-width: 768px) {
   #img_mobile {

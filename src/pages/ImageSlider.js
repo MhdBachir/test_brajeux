@@ -36,10 +36,7 @@ const SlideShow = (props) => {
 
 let screenFit = "sm: object-contain w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover ";
 
-//verify if device is mobile
-if (window.innerWidth < 768) {
-  screenFit = "object-contain sm: object-contain w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover ";
-}
+
 //detect if resizing until 768px
 window.addEventListener("resize", function() {
   if (window.innerWidth < 768) {
