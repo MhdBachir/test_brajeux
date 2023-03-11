@@ -34,13 +34,29 @@ const SlideShow = (props) => {
     }
   };
 
+let screenFit = "sm: object-contain w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover ";
+
+//verify if device is mobile
+if (window.innerWidth < 768) {
+  screenFit = "object-contain sm: object-contain w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover ";
+}
+//detect if resizing until 768px
+window.addEventListener("resize", function() {
+  if (window.innerWidth < 768) {
+    screenFit = "object-contain" + screenFit;
+  }
+
+}, false);
+
+//
+
+console.log("screenFit",screenFit);
   return (
     <div className=" px-2  md:px-0 h-80 md:h-full w-full md:w-screen md:bg-black md: flex" onClick={handleSlideClick}>
       <img id="img_mobile"
           src={slideImages[currentIndex].url}
           alt={'project'}
-          className=" object-contain sm:h-auto w-90   background-color:white flex h-80  object-contain md: object-cover lg: object-cover xl:w-full h-full object-cover "
-      />
+          className={screenFit}/>
     </div>
     
   );
