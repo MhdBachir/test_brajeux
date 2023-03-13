@@ -46,7 +46,7 @@ const Home = () => {
         
         <nav className="sm: p-3 mr-2 flex w-full justify-between items-center p-5 absolute font-semibold text-lg top-0 left-0">
             <Link to="/">BUREAUHELLER™</Link>
-            <div className="sm: pl-2 gap-4 flex items-center justify-start gap-8  ">
+            <div className="sm: pl-2 gap-4 flex items-center justify-end gap-8  ">
                 <Link  className=" hover:text-orange" to="/about">ABOUT</Link>
                 <Link  className=" hover:text-orange"to="https://instagram.com/bureauheller?igshid=YmMyMTA2M2Y=">INSTAGRAM</Link>
             </div>
