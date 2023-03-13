@@ -10,6 +10,7 @@ import ImageGallery from "./pages/ImageGallery";
 import myImage from "./svg_outils_copie/FIRSTSCREEN.png";
 import myImageMobile from "./svg_outils_copie/FIRSTSCREEN-mobile.png";
 import refresh  from "./pages/workOn" ;
+import ImageList from "./pages/ImagesList";
 
 const ImageComponent = () => {
   const [showImage, setShowImage] = useState(true);
@@ -46,6 +47,7 @@ const App = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="/galerie" element={<ImageGallery />}/>
+            <Route path="/images" element={<ImageList/>} />
           </Routes>  
       </Router>
       <ImageComponent />
